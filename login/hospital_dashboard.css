@@ -1,0 +1,114 @@
+/* HOSPITAL DASHBOARD — Clean Sidebar Only CSS */
+/* -------------------- ROOT COLORS -------------------- */
+:root {
+    --accent1:#5b57d9;
+    --accent2:#00b894;
+    --text:#111;
+    --muted:#6b7280;
+    --card:#fff;
+    --bg:#f3f8fd;
+}
+
+/* -------------------- PAGE BACKGROUND -------------------- */
+body {
+    margin:0;
+    font-family:Poppins, Arial, sans-serif;
+    background:var(--bg);
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+    background:linear-gradient(90deg,var(--accent1),var(--accent2));
+    color:#fff;
+    padding:28px;
+    text-align:center;
+}
+
+/* -------------------- LAYOUT -------------------- */
+.container {
+    display:flex;
+    gap:24px;
+    padding:24px;
+}
+
+/* -------------------- SIDEBAR -------------------- */
+.sidebar {
+    width:260px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* User block */
+.user-box {
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.user-box .avatar {
+    width:56px;
+    height:56px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--accent1),var(--accent2));
+    color:#fff;
+    font-weight:700;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.user-box h3 {
+    margin:0;
+    font-size:17px;
+}
+
+.user-box p {
+    margin:4px 0 0;
+    font-size:13px;
+    color:var(--muted);
+}
+
+/* -------------------- SIDEBAR LINKS -------------------- */
+.menu a {
+    display:block;
+    padding:12px 14px;
+    border-radius:10px;
+    margin-bottom:12px;
+    text-decoration:none;
+    font-weight:600;
+    background:#f7fbff;
+    color:#008a6b;
+    transition:0.2s;
+}
+
+.menu a:hover {
+    transform:translateY(-2px);
+    box-shadow:0 6px 12px rgba(0,0,0,0.06);
+}
+
+.menu a.active {
+    background:linear-gradient(90deg,var(--accent1),var(--accent2));
+    color:#fff;
+}
+
+.menu a.logout {
+    background:linear-gradient(90deg,#ff6b6b,#ff4949);
+    color:#fff;
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
+.main {
+    flex:1;
+}
+
+.card {
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}

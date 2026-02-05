@@ -1,0 +1,131 @@
+/* register.css - styles for the register page (keeps dashboard look) */
+:root{
+  --bg1:#eaf2f8;
+  --bg2:#ffffff;
+  --accent1:#5b57d9;
+  --accent2:#00b894;
+  --card:#fff;
+  --muted:#6b7280;
+  --text:#111827;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* header */
+.site-header{
+  background: linear-gradient(90deg,var(--accent1), var(--accent2));
+  color:#fff;
+  padding:28px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align:center;
+}
+.site-header h1{ margin:0; font-size:36px; }
+.site-header p{ margin:6px 0 0; opacity:0.95;}
+
+/* main layout center the form */
+.main-wrap{
+  display:flex;
+  justify-content:center;
+  padding:40px 24px 80px;
+}
+
+/* form container card */
+.register-card{
+  width:100%;
+  max-width:920px;
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 12px 36px rgba(14,41,77,0.06);
+}
+
+/* form layout */
+.register-grid{
+  display:grid;
+  grid-template-columns: 1fr 340px; /* left: form, right: empty / future panel */
+  gap:28px;
+  align-items:start;
+}
+
+/* single-column fallback */
+@media (max-width:980px){
+  .register-grid{ grid-template-columns: 1fr; }
+}
+
+/* form fields */
+form.register-form label{
+  display:block;
+  font-weight:700;
+  margin:12px 0 6px;
+}
+form.register-form input[type="text"],
+form.register-form input[type="email"],
+form.register-form input[type="password"],
+form.register-form input[type="tel"],
+form.register-form textarea,
+form.register-form select {
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #e6edf3;
+  font-size:15px;
+  background: #fff;
+  color: var(--text);
+}
+
+/* inline two-field row (Email + Phone) */
+.row-inline{
+  display:flex;
+  gap:12px;
+}
+.row-inline .col{flex:1}
+
+/* action */
+.form-actions{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+}
+.btn-secondary{
+  background:#f3f7fb;
+  color:var(--accent1);
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+}
+
+/* small helper text */
+.helper{ color:var(--muted); font-size:13px; margin-top:8px; }
+
+/* nice spacing for single input lines like password row */
+.inline-label { display:inline-block; margin-right:8px; font-weight:600; }
+
+/* subtle footer link row */
+.form-footer{ margin-top:16px; font-size:14px; color:var(--muted); }
+
+/* error / success */
+.alert {
+  padding:10px 14px;
+  border-radius:8px;
+  margin-bottom:12px;
+}
+.alert.error { background:#ffe6e6; color:#b00020; }
+.alert.success { background:#e6fff0; color:#0b8a41; }

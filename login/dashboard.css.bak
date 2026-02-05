@@ -1,0 +1,74 @@
+/* ---------------------------
+   Appended styles for Profile & Transactions
+   and small tweak to keep card layout consistent
+   --------------------------- */
+
+/* consistent card heading */
+.card h2, .card h3 { margin-top: 0; font-weight:700; }
+
+/* small utility text */
+.muted { color: #6b7280; font-size: 0.95rem; }
+
+/* alert boxes */
+.errors { color: #b00020; background: #fff0f0; padding: 10px; border-radius: 8px; margin-top: 8px; }
+.success { color: #0b8a41; background: #f0fff5; padding: 10px; border-radius: 8px; margin-top: 8px; }
+
+/* inputs inside cards */
+.card input[type="text"], .card input[type="number"], .card input[type="date"], .card input[type="time"], .card textarea, .card select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  margin-top: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* small action button (profile area) */
+.small-btn {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:8px;
+  background: linear-gradient(90deg,#5b57d9,#00b894);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  margin-right:8px;
+}
+
+/* transactions table */
+.table-compact { width:100%; border-collapse:collapse; margin-top:10px; }
+.table-compact th, .table-compact td {
+  padding:8px 10px;
+  border-bottom: 1px solid #eef2f7;
+  text-align:left;
+}
+.table-compact thead th { font-weight:700; color:#111; }
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .row { flex-direction: column; }
+  .card { width: 100%; }
+  .sidebar { width: 100%; }
+}
+
+/* ensure header keeps fixed spacing when new blocks added */
+.header { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+/* subtle spacing for card columns */
+.row { display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start; }
+
+/* profile avatar inside card */
+.profile-avatar {
+  width:64px; height:64px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:22px; background: linear-gradient(135deg,#5b57d9,#00b894);
+}
+
+/* form button in cards */
+.card .btn { display:inline-block; padding:10px 16px; border-radius:8px; border:none; cursor:pointer; background: linear-gradient(90deg,#5b57d9,#00b894); color:#fff; font-weight:700; }
+
+/* keep the Left Sidebar user box consistent */
+.sidebar .user-box a { text-decoration: none; display:inline-block; margin-top:6px; color: #5b57d9; }
+
+/* keep existing dashboard look: ensure .card min widths */
+.card { min-width: 260px; }

@@ -1,0 +1,49 @@
+/* hospital_login_override.css - safe override for hospital login form */
+
+/* center wrapper, limit width and keep consistent spacing */
+.hospital-wrapper {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 26px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* input fields */
+.hospital-wrapper input[type="text"],
+.hospital-wrapper input[type="password"],
+.hospital-wrapper input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+/* buttons consistent with theme */
+.hospital-wrapper .btn,
+.hospital-wrapper button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hospital-wrapper .btn:hover,
+.hospital-wrapper button:hover {
+  background: #009b78;
+}
+
+/* small responsiveness */
+@media (max-width: 600px) {
+  .hospital-wrapper { padding: 18px; margin: 20px; }
+  header h1 { font-size: 26px; }
+}

@@ -1,0 +1,72 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #dfe9f3, #f7fbff);
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #5b57d9, #00b894 140%);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Page Container */
+.page-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Cards */
+.role-card {
+    background: white;
+    padding: 35px;
+    width: 320px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.role-card h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.role-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00b894;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #009f7a;
+}

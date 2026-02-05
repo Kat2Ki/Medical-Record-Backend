@@ -1,0 +1,141 @@
+/* Patient Dashboard — cleaned & focused
+   - Complete Profile removed
+   - Profile Status removed
+   - Quick Actions removed
+   - Single Profile card with Edit button
+   - Avatar + edit UI supported
+*/
+
+/* Theme variables */
+:root{
+  --bg1:#eaf2f8;
+  --bg2:#ffffff;
+  --accent1:#5b57d9;
+  --accent2:#00b894;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --text:#111827;
+  --danger:#ff6b6b;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Poppins", Arial, sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* Header */
+.header{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff;
+  padding:32px 18px;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+.header h1{font-size:34px;margin-bottom:6px}
+.header p{opacity:0.95;margin:0}
+
+/* Layout */
+.container{display:flex;gap:28px;padding:28px;align-items:flex-start}
+
+/* Sidebar */
+.sidebar{
+  width:270px;
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(11,22,50,0.04);
+  height:fit-content;
+}
+
+/* user block in sidebar */
+.user-box{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.avatar{
+  width:56px;height:56px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;
+}
+.user-box strong{display:block;font-size:16px}
+.user-box .muted{color:var(--muted);font-size:13px;margin-top:4px}
+
+/* Sidebar menu as pill buttons */
+.menu{margin-top:14px}
+.menu a{
+  display:block;
+  padding:12px 14px;
+  margin-bottom:12px;
+  border-radius:10px;
+  text-decoration:none;
+  color:var(--accent2);
+  background:linear-gradient(180deg,#f6fbff,#fff);
+  font-weight:600;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.menu a:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.menu a.active{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff}
+.menu a.logout{background:linear-gradient(90deg,#ff9a96,#ff6b6b);color:#fff;text-align:center}
+
+/* Main column */
+.main{flex:1;display:flex;flex-direction:column;gap:18px}
+
+/* Cards */
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(11,22,50,0.04);
+}
+.row{display:flex;gap:18px;flex-wrap:wrap}
+
+/* compact table */
+.table-compact{width:100%;border-collapse:collapse;margin-top:8px}
+.table-compact th,.table-compact td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left;font-size:14px}
+
+/* Profile card (single) */
+.profile-card{display:flex;gap:12px;align-items:center}
+.profile-avatar{
+  width:64px;height:64px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;
+}
+.profile-meta{flex:1}
+.profile-meta strong{display:block;font-size:16px}
+.profile-meta .muted{color:var(--muted);font-size:13px;margin-top:6px}
+.profile-actions{margin-top:12px;display:flex;gap:10px}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;text-decoration:none;
+}
+.btn.secondary{background:#f3f7fb;color:var(--accent1);border:1px solid #e9eef6}
+.btn.danger{background:var(--danger);color:#fff}
+
+/* File/avatar preview in edit form */
+.profile-img{
+  width:64px;height:64px;border-radius:10px;object-fit:cover;border:2px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.06)
+}
+
+/* transaction form inputs / other inputs */
+input[type="text"], input[type="number"], select, textarea, input[type="file"]{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3;margin-top:8px;font-size:14px;
+}
+
+/* Edit profile page wrapper (if loaded on separate page) */
+.edit-container{
+  max-width:720px;margin:28px auto;padding:18px;border-radius:12px;background:var(--card);box-shadow:0 8px 22px rgba(0,0,0,0.04)
+}
+
+/* small utilities */
+.muted{color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .container{flex-direction:column;padding:16px}
+  .sidebar{width:100%}
+  .row{flex-direction:column}
+}
